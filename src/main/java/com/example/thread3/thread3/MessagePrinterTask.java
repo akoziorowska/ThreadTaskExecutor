@@ -2,6 +2,7 @@ package com.example.thread3.thread3;
 
 public class MessagePrinterTask implements Runnable {
     private String message;
+    private int k=0;
 
     public MessagePrinterTask(String message) {
         this.message = message;
@@ -9,6 +10,7 @@ public class MessagePrinterTask implements Runnable {
 
     //@Override
     public void run() {
-        System.out.println("message="+message);
+        k++;
+        System.out.println("message="+message+"k="+k);
     }
 }
